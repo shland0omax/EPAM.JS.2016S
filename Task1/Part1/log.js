@@ -1,9 +1,9 @@
-for(var i = 0; i < data.length; i++){
+for(var i = 0; i < data.length; i++) {
     var value;
-    if (data[i] === undefined){
+    if (data[i] === undefined) {
         value = "не определено";
     }
-    else if (data[i] === null){
+    else if (data[i] === null) {
         value = "не указано";
     }
     else {
