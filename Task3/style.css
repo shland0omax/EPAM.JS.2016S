@@ -1,0 +1,39 @@
+.wrapper{
+    margin: 0 auto;
+    width: 900px;
+}
+
+.fill-container{
+    border: 3px solid black;
+    width: 720px;
+    height: 300px;
+    float: left;
+}
+
+.block{
+    width: 58px;
+    height: 58px;
+    border: 1px solid lightslategrey;
+    float: left;
+    text-align: center;
+}
+
+.control-container{
+    width: 170px;
+    float: left;
+}
+
+.button{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    background-color: azure;
+    text-align: center;
+}
+
+.button.disabled{
+    cursor: default;
+    background-color: antiquewhite;
+    color: grey;
+}
