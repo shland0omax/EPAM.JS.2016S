@@ -88,7 +88,16 @@
 .logo.pumpkin{
     background-image: url("img/pumpkin.png");
 }
+.logo.bomb{
+    background-image: url("img/bomb.png");
+}
 .logo.play{
     margin: 0;
     position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+.logo.play.bomb{
+    cursor: default;
+    opacity: 0;
 }
