@@ -17,6 +17,15 @@
     float: left;
     text-align: center;
 }
+.block.red{
+    background-color: #f44336;
+}
+.block.orange{
+    background-color: #ff9800;
+}
+.block.green{
+    background-color: #4caf50;
+}
 
 .control-container{
     width: 170px;

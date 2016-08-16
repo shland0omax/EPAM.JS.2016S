@@ -1,3 +1,15 @@
-/**
- * Created by Шландаков on 15.08.2016.
- */
+$(function(){
+    $("#start").on("click", start());
+});
+
+function start(){
+
+}
+
+function stop(){
+
+}
+
+function resume(){
+
+}

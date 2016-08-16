@@ -12,17 +12,15 @@ function generate(){
 
 function setBlockColor(){
     var value = +this.text();
-    var color = "white";
     if (value > 75){
-        color = "#f44336";
+        this.addClass("red");
     }
     else if (value > 50){
-        color = "#ff9800";
+        this.addClass("orange");
     }
     else if (value > 25){
-        color = "#4caf50";
+        this.addClass("green");
     }
-    this.css("background-color", color);
 }
 
 function setColor(){
@@ -48,7 +46,7 @@ function enableButton($button){
     $button.removeClass("disabled");
     var id = $button.attr("id");
     var handler;
-    if (id == "generate"){
+    if(id == "generate"){
         handler = generate;
     }
     else if(id == "setColor"){
@@ -64,7 +62,7 @@ function random(min, max){
     return Math.floor((Math.random()*max)+min);
 }
 
-$(document).ready(function (){
+$(function (){
     disableButton($("#setColor"));
     disableButton($("#reset"));
     enableButton($("#generate"));

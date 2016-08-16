@@ -1,6 +1,7 @@
 .menu{
     width: 100%;
     overflow: auto;
+    margin-bottom: 5px;
 }
 
 .button{
@@ -23,7 +24,7 @@
 }
 
 .wrapper{
-    width: 1100px;
+    width: 900px;
     border: 1px solid grey;
     margin: 0 auto;
     display: flex;
@@ -31,7 +32,7 @@
 
 .column{
     margin: 3px;
-    width: 200px;
+    width: 110px;
     position: relative;
 }
 
@@ -43,30 +44,51 @@
 }
 
 .game-panel{
-    width: 700px;
-    height: 700px;
+    width: 660px;
+    height: 500px;
     border: 1px solid grey;
     margin: 3px;
+    position: relative;
 }
 
 .resource{
     width: 100%;
-    height: 200px;
+    height: 110px;
     position: absolute;
 }
-.resource.cheese{
-    top: 0;
-}
-.resource.orange{
-    bottom: 0;
-}
+.resource.cheese,
 .resource.cherry{
     top: 0;
 }
+.resource.orange,
 .resource.pumpkin{
     bottom: 0;
 }
 
-.logo{
+.score{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
 
+.logo{
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+}
+.logo.cheese{
+    background-image: url("img/cheese.png");
+}
+.logo.cherry{
+    background-image: url("img/cherry.png");
+}
+.logo.orange{
+    background-image: url("img/orange.png");
+}
+.logo.pumpkin{
+    background-image: url("img/pumpkin.png");
+}
+.logo.play{
+    margin: 0;
+    position: absolute;
 }

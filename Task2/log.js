@@ -4,6 +4,7 @@ var zero_func = function(){
 }
 for(var i = 0; i < 5; i++){
     for (var j = 0; j < 3; j++){
+        //sum[j] += data[i].["getCount"+(j+1)] && data[i].["getCount"+(j+1)]() || zerofunc();   //<< recommended
         var func = data[i]["getCount"+(j+1)] || zero_func;
         sum[j] += func.call(data[i]); //if field is undefined or count field is invalid adds 0
     }
