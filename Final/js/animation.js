@@ -9,6 +9,6 @@ function scoreAnimate(element){
 
 }
 
-function bombAnimate(element){
-
+function setBombAnimate(element){
+    element.animate({opacity:1.0}, 2000);
 }
