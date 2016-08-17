@@ -1,3 +1,5 @@
+//TODO: add animation stop, restart; some animatons; setTimeout for res and bomb after game resume; global var with timeout values; 
+
 var timeoutId = [];
 var resourceSize = 64;
 
@@ -26,8 +28,9 @@ function start() {
 }
 
 function stop() {
-    window.clearInterval(timeoutId[0]);
-    window.clearInterval(timeoutId[1]);
+    while(timeoutId.length){
+        clearTimeout(timeoutId.pop());
+    }
     var $startButton = $("#start");
     $startButton.off("click");
     $startButton.on("click", start);
