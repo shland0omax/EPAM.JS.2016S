@@ -20,12 +20,9 @@ function start() {
     $startButton.removeClass("start");
     $startButton.addClass("stop");
     $startButton.text("Stop");
-    $(".logo.play.res").each(function () {
-        $(this).on("click", clickResourceHandler);
-    });
-    $(".logo.play.bomb").each(function () {
-        $(this).off("click", clickBombHandler);
-    });
+    var panel = $("#game-panel");
+    panel.on("click", ".res", clickResourceHandler);
+    panel.on("click", ".bomb", clickBombHandler);
 }
 
 function stop() {
@@ -37,9 +34,7 @@ function stop() {
     $startButton.removeClass("stop");
     $startButton.addClass("start");
     $startButton.text("Start");
-    $(".logo.play").each(function () {
-        $(this).off("click");
-    });
+    $("#game-panel").off("click", ".res");
 }
 
 function createPlayElement() {
@@ -59,7 +54,6 @@ function addResource() {
     var type = getRandomResource();
     $element.addClass(type);
     $element.attr("id", type);
-    $element.on("click", clickResourceHandler);
     setResourceAnimate($element);
     setTimeout(resourceTimeout, 700);
 }
@@ -67,7 +61,6 @@ function addResource() {
 function addBomb() {
     var $element = createPlayElement();
     $element.addClass("bomb");
-    $element.on("click", clickBombHandler);
     setBombAnimate($element);
     setTimeout(bombTimeout, 2000);
 }
