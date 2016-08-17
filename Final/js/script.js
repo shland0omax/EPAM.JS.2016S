@@ -38,6 +38,7 @@ function stop() {
     $startButton.addClass("start");
     $startButton.text("Start");
     $("#game-panel").off("click", ".res");
+    $("#game-panel").off("click", ".bomb");
 }
 
 function createPlayElement() {
