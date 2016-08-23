@@ -1,4 +1,5 @@
 //TODO: add animation stop, restart; some animatons; setTimeout for res and bomb after game resume; global var with timeout values; 
+//id pool for setTimeout,
 
 var timeoutId = [];
 var resourceSize = 64;
