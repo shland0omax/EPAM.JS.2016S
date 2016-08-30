@@ -4,7 +4,7 @@
 
 Zombie.Michael = function(params){
     params.name = "michael";
-    params.speed = 30;
+    params.speed = 3;
     params.health = 70;
     Zombie.call(this, params);
     this.appendZombie();
