@@ -18,6 +18,15 @@ body {
     font-weight: bold;
 }
 
+.level{
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+    color: #f44336;
+    font-size: 21px;
+    font-weight: bold;
+}
+
 #field {
     width: 900px;
     margin: 0 auto;
@@ -45,7 +54,7 @@ body {
     text-align: center;
 }
 
-#btnGenerate, #btnExplode, #btnGrow, #btnSlow, #btnPause {
+#btnGenerate, #btnExplode, #btnGrow, #btnSlow, #btnPause, #btnLevelUp {
     background-color: #ff9800;
 }
 

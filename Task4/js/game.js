@@ -10,16 +10,11 @@ var currentLevel = 0;
 var distance = 854;
 
 function start() {
-    clearClickHandlers($('.button'));
-    enableButton($('#btnGenerate'), handlers[GENERATE_ID]);
-    enableButton($('#btnExplode'), handlers[EXPLODE_ID]);
-    enableButton($('#btnGrow'), handlers[GROWOLD_ID]);
-    enableButton($('#btnSlow'), handlers[SLOWUP_ID]);
-    enableButton($('#btnPause'), handlers[PAUSE_ID]);
-    $('#btnPause > p').text('Pause');
-
+    setupButtons();
     setGameTimeouts();
+    showLevel();
 
+    //global interactions
     $(window).on('zombie_success', gameOver);
 }
 
@@ -39,13 +34,8 @@ function stopGame() {
     for (var i = 0; timeOuts.length > 0; i++) {
         clearTimeout(timeOuts.pop());
     }
-
-    disableButtons($('#btnGenerate'), $('#btnExplode'), $('#btnGrow'), $('#btnSlow'));
-
+    blockButtons();
     $(window).off('zombie_success');
-    clearClickHandlers($('.button'));
-    enableButton($('#btnPause'), resume);
-    $('#btnPause > p').text('Resume');
 }
 
 

@@ -9,6 +9,29 @@ buttonId[SLOWUP_ID] = '#btnSlow';
 buttonId[GENERATE_ID] = '#btnGenerate';
 buttonId[PAUSE_ID] = '#btnPause';
 buttonId[RESUME_ID] = '#btnPause';
+buttonId[LEVEL_UP] = '#btnLevelUp';
+
+function setupButtons(){
+    clearClickHandlers($('.button'));
+    enableButton($(buttonId[GENERATE_ID]), handlers[GENERATE_ID]);
+    enableButton($(buttonId[EXPLODE_ID]), handlers[EXPLODE_ID]);
+    enableButton($(buttonId[GROWOLD_ID]), handlers[GROWOLD_ID]);
+    enableButton($(buttonId[SLOWUP_ID]), handlers[SLOWUP_ID]);
+    enableButton($(buttonId[PAUSE_ID]), handlers[PAUSE_ID]);
+    enableButton($(buttonId[LEVEL_UP]), handlers[LEVEL_UP]);
+    $(buttonId[PAUSE_ID]).text('Pause');
+}
+
+function blockButtons(){
+    disableButton($(buttonId[GENERATE_ID]));
+    disableButton($(buttonId[EXPLODE_ID]));
+    disableButton($(buttonId[GROWOLD_ID]));
+    disableButton($(buttonId[SLOWUP_ID]));
+    disableButton($(buttonId[LEVEL_UP]));
+    clearClickHandlers($('.button'));
+    enableButton($(buttonId[RESUME_ID]), handlers[RESUME_ID]);
+    $(buttonId[RESUME_ID]).text('Resume');
+}
 
 function buttonFreeze(id, timeout, handler) { //freezes button on specified timeout
     if (timeout) {

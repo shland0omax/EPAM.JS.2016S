@@ -11,6 +11,7 @@ handlers[SLOWUP_ID] = slowUp;
 handlers[GENERATE_ID] = generateZombie;
 handlers[PAUSE_ID] = pause;
 handlers[RESUME_ID] = resume;
+handlers[LEVEL_UP] = levelUp;
 
 function generateZombie() {
     var type = random(0, zombieTypes.length);
@@ -30,7 +31,7 @@ function explode() {
 
     effects[EXPLODE_ID].activate(function () {
         zombies.forEach(function (elem) {
-            elem.recieveDamage(15);
+            elem.recieveDamage(LEVELS[currentLevel].explodeDamage);
         });
     });
 }
@@ -81,6 +82,13 @@ function slowUp() {
             clearInterval(defaultId);
         }
     });
+}
+
+function levelUp(){
+    if (currentLevel+2 >= levelCount){
+        disableButton($(buttonId[LEVEL_UP]));
+    }
+    switchLevel(currentLevel+1);
 }
 
 function coolDownEffect(id, handler) {

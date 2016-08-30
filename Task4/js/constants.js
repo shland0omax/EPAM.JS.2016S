@@ -7,6 +7,7 @@ var SLOWUP_ID = 2;
 var GENERATE_ID = 3;
 var PAUSE_ID = 4;
 var RESUME_ID = 5;
+var LEVEL_UP = 6;
 var frequency = 100;
 var gcFrequency = 15000;
 
@@ -51,3 +52,5 @@ LEVELS[3] = {
     slowUpTimeout: 5300,
     slowUpDuration: 6000
 };
+
+var levelCount = LEVELS.length;
